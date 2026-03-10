@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categories - Our Store{% endblock %}
+
+{% block nav_categories %}active{% endblock %}
+
+{% block body %}
+
+    <div class="container my-5">
+        <h1 class="mb-2">Browse Categories</h1>
+        <p class="text-muted mb-5">Find exactly what you're looking for by browsing our categories</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <span class="badge bg-primary fs-6 px-3 py-2">Electronics</span>
+                        </div>
+                        <h4 class="card-title">Electronics</h4>
+                        <p class="card-text text-muted">Headphones, speakers, gadgets and more</p>
+                        <p class="text-muted"><small>12 products available</small></p>
+                        <a href="{{ path('app_products_by_category', {slug: 'electronics'}) }}" class="btn btn-outline-primary">Browse Electronics</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <span class="badge bg-warning fs-6 px-3 py-2">Fashion</span>
+                        </div>
+                        <h4 class="card-title">Fashion</h4>
+                        <p class="card-text text-muted">Clothing, accessories and footwear</p>
+                        <p class="text-muted"><small>18 products available</small></p>
+                        <a href="{{ path('app_products_by_category', {slug: 'fashion'}) }}" class="btn btn-outline-warning">Browse Fashion</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <span class="badge bg-success fs-6 px-3 py-2">Home &amp; Garden</span>
+                        </div>
+                        <h4 class="card-title">Home &amp; Garden</h4>
+                        <p class="card-text text-muted">Furniture, decor and gardening tools</p>
+                        <p class="text-muted"><small>15 products available</small></p>
+                        <a href="{{ path('app_products_by_category', {slug: 'home-garden'}) }}" class="btn btn-outline-success">Browse Home &amp; Garden</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <span class="badge bg-info fs-6 px-3 py-2">Sports</span>
+                        </div>
+                        <h4 class="card-title">Sports &amp; Fitness</h4>
+                        <p class="card-text text-muted">Equipment, apparel and accessories</p>
+                        <p class="text-muted"><small>10 products available</small></p>
+                        <a href="{{ path('app_products_by_category', {slug: 'sports'}) }}" class="btn btn-outline-info">Browse Sports</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <span class="badge bg-danger fs-6 px-3 py-2">Books</span>
+                        </div>
+                        <h4 class="card-title">Books</h4>
+                        <p class="card-text text-muted">Bestsellers, textbooks and more</p>
+                        <p class="text-muted"><small>8 products available</small></p>
+                        <a href="{{ path('app_products_by_category', {slug: 'books'}) }}" class="btn btn-outline-danger">Browse Books</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <span class="badge bg-secondary fs-6 px-3 py-2">More</span>
+                        </div>
+                        <h4 class="card-title">Other</h4>
+                        <p class="card-text text-muted">Miscellaneous items and accessories</p>
+                        <p class="text-muted"><small>5 products available</small></p>
+                        <a href="{{ path('app_products_by_category', {slug: 'other'}) }}" class="btn btn-outline-secondary">Browse Other</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
