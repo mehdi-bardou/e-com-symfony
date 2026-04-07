@@ -86,3 +86,5 @@ Conformément au cahier des charges :
 - ✅ Pas de JavaScript front-end additionnel
 - ✅ Héritage Twig : toutes les pages étendent `base.html.twig`
 - ✅ Navigation avec `path()` Symfony pour les liens internes
+=======
+# e-com-symfony

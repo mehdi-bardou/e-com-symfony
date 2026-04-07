@@ -17,13 +17,15 @@ return [
     ],
     [ // $regexpList
         0 => '{^(?'
-                .'|/products/(\\d+)(*:22)'
-                .'|/categories/([^/]++)(*:49)'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
+                .'|/products/(\\d+)(*:57)'
+                .'|/categories/([^/]++)(*:84)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        22 => [[['_route' => 'app_product_details', '_controller' => 'App\\Controller\\StoreController::productDetails'], ['id'], null, null, false, true, null]],
-        49 => [
+        35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        57 => [[['_route' => 'app_product_details', '_controller' => 'App\\Controller\\StoreController::productDetails'], ['id'], null, null, false, true, null]],
+        84 => [
             [['_route' => 'app_products_by_category', '_controller' => 'App\\Controller\\StoreController::productsByCategory'], ['slug'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
